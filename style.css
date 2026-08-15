@@ -1,0 +1,194 @@
+/* =========================================
+   1. ESTILOS GENERALES (La base)
+   ========================================= */
+* {
+    /* Esto quita los márgenes por defecto del navegador */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Esto hace que todos los enlaces internos se deslicen suavemente */
+}
+
+body {
+    /* Cambiamos la fuente a una más moderna y limpia */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fcf9f2; /* Un color crema muy suave de fondo */
+    color: #333333; /* Texto gris oscuro (más elegante que el negro puro) */
+}
+
+/* =========================================
+   2. CABECERA PRINCIPAL (El Hero)
+   ========================================= */
+.hero {
+    /* Añadimos una imagen de fondo de Internet y un filtro oscuro para que las letras se lean bien */
+    background-image: linear-gradient(rgba(36, 28, 28, 0.7), rgba(36, 28, 28, 0.7)), url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover; /* Para que la imagen ocupe todo el espacio */
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 20px; 
+}
+
+.hero h1 {
+    font-size: 3.5rem; /* Hacemos el título gigante */
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #d4a373; /* Color dorado para el subtítulo */
+}
+
+/* =========================================
+   3. EL BOTÓN
+   ========================================= */
+.btn {
+    background-color: #d4a373; /* Dorado */
+    color: #3b2f2f; /* Texto marrón */
+    text-decoration: none; /* Quitamos la línea de abajo del enlace */
+    padding: 15px 35px;
+    font-weight: bold;
+    border-radius: 30px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Animación suave al pasar el ratón */
+}
+
+/* Efecto al pasar el ratón por encima (hover) */
+.btn:hover {
+    background-color: #faedcd; /* Se vuelve más clarito */
+}
+
+/* =========================================
+   4. MENÚ Y PIE DE PÁGINA
+   ========================================= */
+.menu-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* =========================================
+   6. PIE DE PÁGINA Y CONTACTO
+   ========================================= */
+.footer-negocio {
+    background-color: #241c1c;
+    color: #fcf9f2;
+    padding: 60px 20px 20px 20px;
+    margin-top: 50px;
+}
+
+.footer-contenido {
+    display: grid;
+    /* Cambiamos 200px a 300px para que las dos columnas aprovechen mejor el espacio */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto; 
+    text-align: left;
+}
+
+.footer-columna h4 {
+    color: #d4a373; /* Títulos en dorado */
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-columna p {
+    margin-bottom: 10px;
+    color: #cccccc;
+}
+
+.footer-legal {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #4a3f3f;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* =========================================
+   5. TARJETAS DEL MENÚ (CSS Grid)
+   ========================================= */
+.menu-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #3b2f2f;
+}
+
+/* Magia para que se adapte a móviles y PC automáticamente */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+}
+
+/* Diseño de cada tarjeta individual */
+.producto {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+    transition: transform 0.3s;
+    
+    /* MAGIA FLEXBOX: Convertimos la tarjeta en una columna flexible */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efecto al pasar el ratón por encima de un café */
+.producto:hover {
+    transform: translateY(-10px); /* La tarjeta "flota" hacia arriba */
+}
+
+.producto h3 {
+    color: #3b2f2f;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.producto p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.precio {
+    background-color: #d4a373;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    
+    /* EL TRUCO: margin-top: auto empuja este elemento y todo lo que tiene debajo hacia el fondo */
+    margin-top: auto; 
+    /* Como ahora estamos en Flexbox, usamos esto para que la etiqueta quede centrada */
+    align-self: center; 
+}
+
+.btn-pedir {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #3b2f2f;
+    color: white;
+    border: none;
+    border-radius: 30px; /* Lo hacemos redondeado para que haga juego con el botón principal */
+    cursor: pointer;
+    font-weight: bold;
+    font-family: inherit; /* TRUCO VITAL: Esto fuerza a que use la misma letra bonita de la página */
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Hace que el cambio de color sea suave, no de golpe */
+}
+
+.btn-pedir:hover { 
+    background-color: #d4a373; 
+    color: #3b2f2f; 
+    transform: scale(1.05); /* TRUCO: Hace que el botón crezca un poquito al pasar el ratón */
+}

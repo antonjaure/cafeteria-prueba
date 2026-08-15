@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Grano Dorado | Cafetería de Especialidad</title>
+    <!-- Aquí conectamos tu archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. SECCIÓN PRINCIPAL (HERO) -->
+    <header class="hero">
+        <h1>El Grano Dorado</h1>
+        <p>El mejor café de especialidad de la ciudad</p>
+        <a href="#menu" class="btn">Ver nuestro menú</a>
+    </header>
+
+    <!-- 2. SECCIÓN DEL MENÚ -->
+    <main>
+        <section id="menu" class="menu-section">
+            <h2>Nuestros Clásicos</h2>
+            
+            <div class="menu-grid">
+                <!-- Café 1 -->
+                <article class="producto">
+                    <h3>Espresso Clásico</h3>
+                    <p>Intenso y aromático, preparado con granos 100% arábica recién tostados.</p>
+                    <span class="precio">2.50€</span>
+                    <button class="btn-pedir">Pedir ahora</button>
+                </article>
+
+                <!-- Café 2 -->
+                <article class="producto">
+                    <h3>Cappuccino Italiano</h3>
+                    <p>Perfecto equilibrio entre espresso, leche vaporizada y una nube de espuma.</p>
+                    <span class="precio">3.20€</span>
+                    <button class="btn-pedir">Pedir ahora</button>
+                </article>
+
+                <!-- Café 3 -->
+                <article class="producto">
+                    <h3>Latte Vainilla</h3>
+                    <p>Suave espresso con leche cremosa y un toque de vainilla natural.</p>
+                    <span class="precio">3.80€</span>
+                    <button class="btn-pedir">Pedir ahora</button>
+                </article>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- 3. PIE DE PÁGINA (CONTACTO) -->
+    <footer class="footer-negocio">
+        <div class="footer-contenido">
+            
+            <!-- COLUMNA 1: El Mapa (Ahora tendrá más espacio) -->
+            <div class="footer-columna">
+                <h4>📍 Dónde estamos</h4>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12151.789230553011!2d-3.714157!3d40.410712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI0JzM4LjYiTiAzwrA0MSc1My4wIlc!5e0!3m2!1ses!2ses!4v1612345678901!5m2!1ses!2ses" 
+                    width="100%" 
+                    height="250" 
+                    style="border:0; border-radius: 8px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+                <p style="margin-top: 10px;">Plaza Mayor, Madrid</p>
+            </div>
+
+            <!-- COLUMNA 2: Horarios y Contacto fusionados -->
+            <div class="footer-columna">
+                <div class="info-grupo">
+                    <h4>🕒 Horarios</h4>
+                    <p>Lunes a Viernes: 8:00 - 20:00</p>
+                    <p>Sábados y Domingos: 9:00 - 14:00</p>
+                </div>
+                
+                <!-- Añadimos un margen superior para separar esta sección de los horarios -->
+                <div class="info-grupo" style="margin-top: 40px;">
+                    <h4>📱 Síguenos</h4>
+                    <p>@ElGranoDorado</p>
+                    <p>+34 600 000 000</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="footer-legal">
+            <p>&copy; 2026 El Grano Dorado. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Aquí conectamos tu archivo JavaScript (justo antes de cerrar el body) -->
+    <script src="script.js"></script>
+</body>
+</html>
